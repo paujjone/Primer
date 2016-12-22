@@ -1,5 +1,4 @@
 import numpy
-Primeslist = file("/Users/PJ/Dropbox/1code/Primer/Primeslist.txt",'w')
 # Number being tested
 X = 3
 # Starting List for primes
