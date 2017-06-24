@@ -1,47 +1,40 @@
-import numpy
-# Number being tested
-X = 3
+##########################################################
+#                     P R I M E R                        #
+##########################################################
+#       A simple python scipt to find prime numbers      #
+#     Ideally this is a good script that can be added    #
+#              to other future projects.                 #
+#                                                        #
+#             Copyright (c) 2017 Paul Jones              #
+#                                                        #
+##########################################################
+
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+
+
+
 # Starting List for primes
 Primes = [2]
-#Outer Loop : Runs indefinitely
-try:
-    while True:
-        Y = 1
-        M = 1
-        if X <= 100:
-            while Y < X:
-                Y = Y + 1
-                M = M + 1
-                if X % M == 0: # composite
-                    X = X + 1
-                    Y = X
-                elif Y + 1 >= X:
-                    Primes.append(X)
-                    print(X)
-                    X = 1 + X
-                    Y = X
-                    M = 1          
-        elif X > 100:  
-            M = -1
-            while Y < X: 
-                Y = Y + 1
-                M = M + 1
-                if X < Primes[M] * Primes[M]:
-                    Primes.append(X)
-                    print(X)
-                    X = 1 + X
-                    Y = X
-                    M = 1          
-                elif X % Primes[M] == 0: # composite
-                    X = X + 1
-                    Y = X         
-                elif Y + 1 >= X:       
-                    Primes.append(X)
-                    print(X)
-                    X = 1 + X
-                    Y = X                 
-                  
-except KeyboardInterrupt:
-    numpy.savetxt("Primeslist.csv", Primes, delimiter=',')
-    print("Primes tucked away!")
-    Primeslist.close()
+# Number being tested
+X = 3
+while True:                                #Outer Loop : Runs indefinitely
+    Y = -1
+    while Y < X:                           #Inner Loop Runs until X is found to be Prime or Composite
+        Y += 1
+        if (X < Primes[Y] * Primes[Y])
+            or (Y + 1 >= X):               #Prime
+            Primes.append(X)
+            X += 1
+            Y = X
+        elif X % Primes[Y] == 0:           # Composite
+            X += 1
+            Y = X
